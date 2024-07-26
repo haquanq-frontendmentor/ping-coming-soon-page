@@ -1,0 +1,284 @@
+:root {
+    --clr-red-300: hsl(354, 100%, 66%);
+
+    --clr-gray-300: hsl(0, 0%, 59%);
+
+    --clr-blue-300: hsl(223, 100%, 88%);
+    --clr-blue-500: hsl(223, 87%, 63%);
+    --clr-blue-900: hsl(209, 33%, 12%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --font-main: "Libre Franklin", sans-serif;
+    --font-thin: 300;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    --text-xxsm: 0.625rem;
+    --text-xsm: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-md: 1.125rem;
+    --text-md-2: 1.25rem;
+    --text-md-3: 1.375rem;
+    --text-lg: 2rem;
+    --text-lg-2: 2.5rem;
+    --text-xl: 3rem;
+
+    --leading-none: 1;
+
+    --rounded-full: 9999px;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    line-height: var(--leading-none);
+    -webkit-font-smoothing: antialiased;
+}
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+button,
+input {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.main__container {
+    padding: 5.3125rem 1.6875rem 2.375rem 1.75rem;
+    background-color: var(--clr-white);
+    font-family: var(--font-main);
+    font-weight: var(--font-thin);
+    font-size: var(--text-xsm);
+}
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.main__logo {
+    height: 1rem;
+    margin-bottom: 2.375rem;
+}
+.main__headline {
+    font-weight: var(--font-thin);
+    color: var(--clr-gray-300);
+    font-size: var(--text-md-3);
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.005em;
+}
+.main__description {
+    font-weight: var(--font-thin);
+    line-height: 1.125rem;
+    margin-bottom: 1.875rem;
+    color: var(--clr-blue-900);
+}
+.main__headline--bold {
+    color: var(--clr-blue-900);
+    margin-bottom: 1.875rem;
+}
+.main__form {
+    width: 100%;
+    padding: 0 1.1875rem;
+    margin-bottom: 4.25rem;
+    max-width: 39.8125rem;
+}
+.main__form__input-wrapper {
+    position: relative;
+    margin-bottom: 0.625rem;
+    padding-left: 1px;
+}
+.main__form__input-hint {
+    text-align: center;
+    font-style: italic;
+    font-size: var(--text-xxsm);
+    color: var(--clr-red-300);
+    margin-top: 0.4375rem;
+    margin-bottom: 0.9375rem;
+}
+.main__form__input {
+    color: var(--clr-blue-900);
+    padding: calc(1.5em - 0.40625rem) 2rem calc(1.25em - 0.1875rem) 2rem;
+    border-radius: var(--rounded-full);
+    background-color: transparent;
+    border: 1px solid var(--clr-blue-300);
+    width: 100%;
+    letter-spacing: 0.01em;
+    transition: border-color 150ms ease;
+}
+.main__form__input[aria-invalid="true"] {
+    border-color: var(--clr-red-300);
+}
+.main__form__input[aria-invalid="true"] + .main__form__input-hint {
+    display: block;
+}
+.main__form__input::placeholder {
+    color: var(--clr-blue-300);
+}
+.main__form__input:focus {
+    border-color: var(--clr-blue-500);
+}
+.main__form__btn {
+    border: none;
+    background-color: transparent;
+    padding: calc(1em + 0.25rem);
+    width: 100%;
+    cursor: pointer;
+    border-radius: var(--rounded-full);
+    background-color: var(--clr-blue-500);
+    font-weight: var(--font-semibold);
+    color: var(--clr-white);
+    transition: opacity 200ms ease, transform 150ms ease;
+    box-shadow: hsla(223, 87%, 63%, 0.25) 0 12px 24px -4px;
+}
+.main__image {
+    margin-bottom: 7.5rem;
+    width: 100%;
+    max-width: 40rem;
+}
+.main__social {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.75rem;
+}
+.main__social > * + * {
+    margin-left: 0.8125rem;
+}
+.main__social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9375rem;
+    height: 1.9375rem;
+    border-radius: var(--rounded-full);
+    border: 1px solid var(--clr-blue-300);
+    transition-property: border-color, background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+}
+.main__social__link svg {
+    width: 0.9375rem;
+    height: 0.9375rem;
+}
+.main__social__link path {
+    transition: fill 200ms ease;
+    fill: var(--clr-blue-500);
+}
+.main__copyright {
+    font-size: var(--text-xxsm);
+}
+
+@supports selector(:focus-visible) {
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+        outline: 2px solid var(--clr-blue-500);
+        outline-offset: 4px;
+    }
+}
+@supports selector(:active) {
+    button:active {
+        transform: scale(0.95);
+    }
+}
+@media (hover: hover) {
+    .main__form__input:hover {
+        border-color: var(--clr-blue-500);
+    }
+    .main__form__btn:hover {
+        opacity: 0.6;
+    }
+    .main__social__link:hover {
+        background-color: var(--clr-blue-500);
+        border-color: var(--clr-blue-500);
+    }
+    .main__social__link:hover path {
+        fill: var(--clr-white);
+    }
+}
+@media screen and (min-width: 32rem) {
+    .main__container {
+        font-size: var(--text-base);
+        padding-top: 5.375rem;
+        padding-bottom: 3.125rem;
+    }
+    .main__logo {
+        height: auto;
+        margin-bottom: 3.0625rem;
+    }
+    .main__headline {
+        font-size: var(--text-lg);
+        line-height: 2.75rem;
+    }
+    .main__description {
+        font-size: var(--text-md-2);
+        line-height: 1.75rem;
+        margin-bottom: 2.375rem;
+    }
+    .main__image {
+        margin-left: 0.0625rem;
+        margin-bottom: 4.5rem;
+    }
+    .main__copyright {
+        font-size: var(--text-xsm);
+    }
+    .main__social {
+        margin-bottom: 1.6875rem;
+    }
+}
+@media screen and (min-width: 48em) {
+    .main__headline {
+        font-size: var(--text-xl);
+        line-height: 3.5rem;
+    }
+    .main__form {
+        display: flex;
+        padding: 0;
+        margin-bottom: 5.375rem;
+    }
+    .main__form__input-wrapper {
+        width: 100%;
+        margin: 0 1rem 0 0;
+        padding: 0;
+    }
+    .main__form__input-hint {
+        position: absolute;
+        top: calc(100% + 0.625rem);
+        font-size: var(--text-xsm);
+        left: 1.875rem;
+        margin: 0;
+    }
+    .main__form__input {
+        padding-left: 1.8125rem;
+    }
+    .main__form__btn {
+        flex-shrink: 0;
+        width: 12.5rem;
+    }
+}
