@@ -34,7 +34,7 @@ Accessibility
 
 ### Preview
 
-![](./.docs/preview.png)
+![](./.docs/design/desktop-design.jpg)
 
 ## :boat: Development workflow
 
