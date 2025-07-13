@@ -1,27 +1,29 @@
-const emailForm = document.querySelector(".main__form");
-const emailInput = document.querySelector(".main__form__input");
-const emailInputHint = document.querySelector(".main__form__input-hint");
+const subscribeForm = document.querySelector(".subscribe__form");
+const emailInput = document.querySelector("#email-input");
+const emailInputHint = document.querySelector("#email-input-hint");
 
-emailForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+const validateEmail = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (emailInput.value == "") {
-        emailInputHint.textContent = "Whoops! It looks like you forgot to add your email";
-        emailInput.setAttribute("aria-invalid", "true");
-        return;
+    let errorMessage = "";
+    if (emailInput.value === "") {
+        errorMessage = "Whoops! It looks like you forgot to add your email.";
+    } else if (!emailPattern.test(emailInput.value)) {
+        errorMessage = "Please use a valid email address.";
+    } else {
     }
 
-    alert("We have received your email!");
-});
-
-emailInput.addEventListener("invalid", (e) => {
-    e.preventDefault();
-
-    emailInputHint.textContent = "Please provide a valid email address";
-    emailInput.setAttribute("aria-invalid", "true");
-});
-
-emailInput.addEventListener("input", (e) => {
+    if (errorMessage !== "") {
+        emailInputHint.textContent = errorMessage;
+        emailInput.setAttribute("aria-invalid", "true");
+        return false;
+    }
     emailInputHint.textContent = "";
     emailInput.setAttribute("aria-invalid", "false");
+    return true;
+};
+
+subscribeForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (validateEmail()) alert("We have received your email address!");
 });
