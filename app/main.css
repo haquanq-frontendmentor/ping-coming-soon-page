@@ -172,8 +172,8 @@ body {
     font-size: clamp(0.75rem, 0.5115rem + 1.0178vw, 1rem);
 }
 .subscribe__submit-btn {
+    flex-shrink: 0;
     border: none;
-    background-color: transparent;
     padding: calc(1em + 0.25rem);
     width: 100%;
     cursor: pointer;
@@ -248,18 +248,11 @@ body {
     .subscribe__form {
         padding: 0;
         grid-template-columns: auto 12.5rem;
-        margin-bottom: 5.375rem;
     }
     .text-field__hint {
         position: absolute;
         top: calc(100% + 0.625rem);
         left: 1.875rem;
         margin: 0;
-    }
-    .text-field__input {
-        padding-left: 1.8125rem;
-    }
-    .subscribe__submit-btn {
-        flex-shrink: 0;
     }
 }
