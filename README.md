@@ -1,15 +1,32 @@
-# Frontend Mentor - Ping coming soon page solution
+## Frontend Mentor - Ping coming soon page solution
 
 This is a solution to the [Ping coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+<p>
+  <a href="https://www.frontendmentor.io/solutions/mobile-first-responsive-w-css-media-query---html---js-Jj7nalNHsW">
+    <img
+      alt="Solution post"
+      src="https://img.shields.io/badge/Frontendmentor-blue?label=Solution%20on"
+    /></a>
+  <a href="https://haquanq-frontendmentor.github.io/ping-coming-soon-page/">
+    <img
+      alt="Live demo"
+      src="https://img.shields.io/badge/Demo-teal?label=Live"
+    /></a>
+  <a href="./LICENSE"
+    ><img
+      allt="MIT License"
+      src="https://img.shields.io/badge/MIT-blue?label=license"
+  /></a>
+</p>
+
 ## Table of contents
 
-- [Project overview](#rocket-project-overview)
-- [Development workflow](#boat-development-workflow)
+- [Project overview](#sunrise-project-overview)
+- [Development workflow](#stars-development-workflow)
 - [Working in this repository](#astronaut-working-in-this-repository)
-- [License](#page_with_curl-license)
 
-## :rocket: Project overview
+## :sunrise: Project overview
 
 ### Challenge equirements
 
@@ -22,34 +39,36 @@ This is a solution to the [Ping coming soon page challenge on Frontend Mentor](h
 
 ### Implemented features
 
-Functional
+Features
 
-- [x] Form can validate basic specifications (required, email)
-- [x] Show every error when users submit
+- [x] Subscription form
+  - [x] Validate correct email format
+  - [x] Show hints on input error
 
 Accessibility
 
 - [x] Responsive accross different screen sizes
-- [x] Added custom indicator when interactive elements focused
+- [x] Interactive elements have clear focus indicator
 
 ### Preview
 
-![](./.docs/design/desktop-design.jpg)
+![](./docs/design/desktop-design.jpg)
 
-## :boat: Development workflow
+## :stars: Development workflow
 
 ### Approach
 
-Developed with mobile-first workflow, followed with [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)
+Site built with mobile-first workflow to prioritize mobile devices, made accessible using [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/).
 
-### Built with
+### Tools
 
-| Tool          | Note                               |
-| ------------- | ---------------------------------- |
-| `HTML`        | Standard markup language           |
-| `CSS`         | Vanilla CSS                        |
-| `JavsScript`  | Without any library                |
-| `BrowserSync` | Development server, live reloading |
+- **HTML + CSS:** vanilla CSS for styling.
+- **JavaScript:** for site interactivity
+- **Browsersync:** live development server (sync files changes).
+
+### Deployment
+
+- Deployed on github page using Github Actions (manually triggered).
 
 ## :astronaut: Working in this repository
 
@@ -65,7 +84,7 @@ Having these tools installed:
 Open new terminal, run the following command:
 
 ```
-git clone https://github.com/haquanq/fm-ping-coming-soon-page.git
+git clone https://github.com/haquanq-frontendmentor/ping-coming-soon-page.git
 ```
 
 Then, run `npm install` to install all dependencies.
@@ -74,14 +93,10 @@ Then, run `npm install` to install all dependencies.
 npm install
 ```
 
-## Development workflow
+### Start development server
 
 In terminal, run `npm run dev` to start development server:
 
 ```
 npm run dev
 ```
-
-## :page_with_curl: License
-
-This project follows [MIT License](./LICENSE). **DO NOT** use this project as your solution on [Frontend mentor](https://www.frontendmentor.io/solutions).
