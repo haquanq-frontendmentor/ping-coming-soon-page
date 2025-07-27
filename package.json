@@ -1,5 +1,5 @@
 {
-  "name": "fm-ping-coming-soon-page",
+  "name": "ping-coming-soon-page",
   "description": "Solution for frontendmentor.io challenge: ping-coming-soon-page",
   "devDependencies": {
     "browser-sync": "^3.0.2"
