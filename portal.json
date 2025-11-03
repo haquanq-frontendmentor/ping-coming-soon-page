@@ -1,0 +1,15 @@
+{
+  "name": "Ping Coming Soon Page",
+  "featured": false,
+  "colors": {
+    "brand": "#4D7BF3"
+  },
+  "images": {
+    "preview": "https://raw.githubusercontent.com/haquanq-frontendmentor/ping-coming-soon-page/main/docs/preview.jpg"
+  },
+  "frontendmentor": {
+    "difficulty": "newbie",
+    "challengeUrl": "https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da",
+    "solutionUrl": "https://www.frontendmentor.io/solutions/mobile-first-responsive-w-css-media-query---html---js-Jj7nalNHsW"
+  }
+}
